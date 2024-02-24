@@ -7,8 +7,8 @@ FactoryBot.define do
     isbn_13 { 'b781593275617' }
     description { 'Ruby Under a Microscope is a cool book!' }
     released_on { '2013-09-01' }
-    publisher
-    author
+    association :author
+    association :publisher
   end
 
   factory :ruby_on_rails_tutorial, class: Book do
@@ -18,8 +18,8 @@ FactoryBot.define do
     isbn_13 { 'b780134077703' }
     description { 'The Rails Tutorial is great!' }
     released_on { '2013-05-09' }
-    publisher_id { nil }
     association :author, factory: :michael_hartl
+    association :publisher
   end
 
   factory :agile_web_development, class: Book do
@@ -29,7 +29,7 @@ FactoryBot.define do
     isbn_13 { 'b781937785567' }
     description { 'Stay agile!' }
     released_on { '2015-10-11' }
-    publisher
     association :author, factory: :sam_ruby
+    association :publisher
   end
 end
