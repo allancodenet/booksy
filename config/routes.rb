@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   scope :api do
-   resources :books
+    resources :books
+    resources :authors
+    resources :publishers
   end
+  root to: "books#index"
 end

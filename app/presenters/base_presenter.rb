@@ -1,8 +1,15 @@
 class BasePresenter
+  include Rails.application.routes.url_helpers
   @build_attributes = []
   @relations = []
   @sort_attributes = []
   @filter_attributes = []
+
+  def cover
+    path = @object.cover.url.to_s
+    path[0] = "" if path[0] == "/"
+    "#{root_url}#{path}"
+  end
   # metaprogramming example
   #  #CLASS_ATTRIBUTES = {
   #     build_with: :build_attributes,
