@@ -29,7 +29,7 @@ class BasePresenter
                   :filter_attributes, :build_attributes
 
     def build_with(*args)
-          @build_attributes = args.map(&:to_s)
+      @build_attributes = args.map(&:to_s)
     end
     def related_to(*args)
       @relations = args.map(&:to_s)
