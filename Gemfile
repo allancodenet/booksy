@@ -11,7 +11,11 @@ gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
-gem 'kaminari'
+gem "kaminari"
+gem "carrierwave"
+gem "carrierwave-base64"
+gem "pg"
+gem "pg_search"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -26,7 +30,7 @@ gem 'kaminari'
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -39,9 +43,9 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
+  gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -50,8 +54,7 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers'
-  gem 'webmock'
-  gem 'database_cleaner'
+  gem "shoulda-matchers"
+  gem "webmock"
+  gem "database_cleaner"
 end
-
