@@ -17,6 +17,7 @@ gem "carrierwave-base64"
 gem "pg"
 gem "pg_search"
 gem "bcrypt"
+gem "pundit"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"

@@ -1,4 +1,5 @@
 class AuthorsController < ApplicationController
+  before_action :authenticate_user, only: [:create, :update, :destroy]
   def index
     authors = orchestrate_query(Author.all)
     render serialize(authors)
