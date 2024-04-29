@@ -1,5 +1,6 @@
 class AccessTokensController < ApplicationController
   def create
+    skip_authorization
     user = User.find_by!(email: login_params[:email])
 
     if user.authenticate(login_params[:password])
@@ -21,6 +22,7 @@ class AccessTokensController < ApplicationController
   end
 
   def destroy
+    skip_authorization
     access_token.destroy
     render status: :no_content
   end
