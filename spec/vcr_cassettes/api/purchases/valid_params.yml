@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.stripe.com/v1/tokens
+    body:
+      encoding: UTF-8
+      string: card[number]=4242424242424242&card[exp_month]=6&card[exp_year]=2028&card[cvc]=314
+    headers:
+      User-Agent:
+      - Stripe/v1 RubyBindings/11.2.0
+      Authorization:
+      - Bearer YOUR_API_KEY
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Stripe-Version:
+      - '2024-04-10'
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"11.2.0","lang":"ruby","lang_version":"3.2.1 p31 (2023-02-08)","platform":"x86_64-linux","engine":"ruby","publisher":"stripe","uname":"Linux
+        version 5.15.133.1-microsoft-standard-WSL2 (root@1c602f52c2e4) (gcc (GCC)
+        11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP Thu Oct 5 21:02:42 UTC 2023","hostname":"ALLAN"}'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Apr 2024 18:00:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '114'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET,HEAD,PUT,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required,
+        X-Stripe-Privileged-Session-Required
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Vary:
+      - Origin
+      Www-Authenticate:
+      - Bearer realm="Stripe"
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "message": "Invalid API Key provided: YOUR_API_KEY",
+            "type": "invalid_request_error"
+          }
+        }
+  recorded_at: Tue, 30 Apr 2024 18:00:59 GMT
+recorded_with: VCR 6.2.0

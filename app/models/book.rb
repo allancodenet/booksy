@@ -1,6 +1,7 @@
 class Book < ApplicationRecord
   include PgSearch::Model
   multisearchable against: [:title, :subtitle, :description]
+  monetize :price_cents
   belongs_to :publisher
   belongs_to :author
 

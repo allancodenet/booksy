@@ -18,6 +18,8 @@ gem "pg"
 gem "pg_search"
 gem "bcrypt"
 gem "pundit"
+gem "money-rails"
+gem "stripe"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -48,6 +50,7 @@ group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "rspec-rails"
   gem "factory_bot_rails"
+  gem "vcr"
 end
 
 group :development do
